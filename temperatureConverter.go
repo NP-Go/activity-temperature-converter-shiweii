@@ -5,12 +5,6 @@ import (
 	"strconv"
 )
 
-var measurement = map[int]string{
-	1: "Kelvin",
-	2: "Celsius",
-	3: "Fahrenheit",
-}
-
 func convertKelvin(temperatureInput float64) (float64, float64) {
 	//Insert your code here
 	resultFahrenheit := (((temperatureInput - 273.15) * 9) / 5) + 32
@@ -46,6 +40,12 @@ func main() {
 	var temperatureChoiceInput, temperatureInput string
 	var temperatureChoice int
 	var temperature float64
+
+	var measurement = map[int]string{
+		1: "Kelvin",
+		2: "Celsius",
+		3: "Fahrenheit",
+	}
 
 	// Validate that user only input integer 1, 2 or 3
 	for {
